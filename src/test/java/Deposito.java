@@ -13,6 +13,7 @@ class Deposito {
         void deveDepositarValoresValidos(double amount) {
             DigitalWallet digitalWallet = new DigitalWallet("Arthur", 0);
             digitalWallet.deposit(amount);
+
             assertEquals(digitalWallet.getBalance(), amount, 0.0001, "O valor para depósito deve ser válido");
         }
 

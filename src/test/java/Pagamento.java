@@ -16,7 +16,11 @@ public class Pagamento {
     DigitalWallet digitalWallet;
 
     @ParameterizedTest
-    @CsvSource({ "100.0, 30.0, true", "50.0, 80.0, false", "10.0, 10.0, true" })
+    @CsvSource({
+            "100.0, 30.0, true",
+            "50.0, 80.0, false",
+            "10.0, 10.0, true"
+    })
     void pagamentoComCarteiraVerificadaENaoBloqueada(double inicial, double valor, boolean esperado) {
         digitalWallet = new DigitalWallet("Arthur", inicial);
         digitalWallet.unlock();
@@ -30,7 +34,7 @@ public class Pagamento {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {-100, -100})
+    @ValueSource(ints = {-100, 0})
     void deveLancarExcecaoParaPagamentoInvalido(double valor) {
         digitalWallet = new DigitalWallet("Arthur", 500);
         digitalWallet.unlock();

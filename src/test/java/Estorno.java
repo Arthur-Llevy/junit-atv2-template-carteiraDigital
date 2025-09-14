@@ -58,9 +58,6 @@ class Estorno {
     void deveLancarSeNaoVerificadaOuBloqueada() {
         digitalWallet = new DigitalWallet("Arthur", 9000);
 
-        assumeTrue(digitalWallet.isVerified());
-        assumeFalse(digitalWallet.isLocked());
-
         assertThrows(IllegalStateException.class, () -> digitalWallet.refund(10));
         
     }
