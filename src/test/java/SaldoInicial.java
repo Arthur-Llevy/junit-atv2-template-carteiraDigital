@@ -1,16 +1,14 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.example.DigitalWallet;
 
-class SaldoInicial {
-        void deveConfigurarSaldoInicialCorreto() {
-            
-        }
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-        void deveLancarExcecaoParaSaldoInicialNegativo() {
-            
+
+class SaldoInicial {
+        @Test
+        public void deveLancarExcecaoParaSaldoInicialNegativo() {
+            assertThrows(IllegalArgumentException.class, () -> new DigitalWallet("Arthur", -20));
         }
     }

@@ -1,4 +1,4 @@
-# Atividade: Carteira Digital (JUnit 5)
+[# Atividade: Carteira Digital (JUnit 5)
 
 ## Objetivo
 
@@ -89,4 +89,4 @@ public class DigitalWallet {
 - Uso correto de ```assumeTrue```/```assumeFalse``` para pré-condições (verificada/não bloqueada).
 - Uso de ```assertThrows``` para entradas inválidas e estados inválidos.
 - Cobertura com Parameterized Tests (```@ValueSource```, ```@CsvSource``` e pelo menos um ```@MethodSource```).
-- Clareza na organização e nomes descritivos.
+- Clareza na organização e nomes descritivos.]()
